@@ -1,15 +1,15 @@
 const { leerJSON, escribirJSON } = require("../data");
-const productos_db = leerJSON();
+const productosx = leerJSON();
 const editar = function(id){
 
-    const productoAModificar = productos_db.find(producto => producto.id === id);
+    const productoAModificar = productosx.find(producto => producto.id === id);
 
     if(!productoAModificar){
       return `Mmmmm, 404 NOT FOUND`
     }
 
     const {nombre, marca} = productoAModificar;
-    const productosModificados =  this.productos.map(producto => {
+    const productosModificados =  productosx.map(producto => {
       
       if(producto.id === id){
         producto.stock = !producto.stock

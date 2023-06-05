@@ -1,6 +1,6 @@
 const { leerJSON, escribirJSON } = require("../data");
-const productos_db = leerJSON();
-const listar = function (productos = productos_db) {
+const productosx = leerJSON();
+const listar = function (productos = productosx) {
     console.log("\n***************LISTA DE PRODUCTOS *****************\n".yellow);
     productos.forEach(({id, nombre, marca, precio, stock},i) => {
         console.log(
